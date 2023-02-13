@@ -62,9 +62,10 @@
 //         : `Not divisible by ${divisor}!`;
 // }
 
-function divisible (dividend,divisor) {
-    if(dividend % divisor === 0) {
-        return true;
-    } else {
-        return false;
-    }
+// function divisible (dividend,divisor) {
+//     if (dividend % divisor === 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
