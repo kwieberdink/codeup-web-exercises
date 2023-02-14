@@ -1,7 +1,7 @@
 "use strict";
 
 /* ########################################################################## */
-
+(() => {
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
@@ -55,6 +55,20 @@
 //         alert (`I don't know anything about that color.`);
 // }
 
+// TEACHER EXAMPLE:
+//Wants students to focus on a function returning something rather than
+// outputting an alert or message
+
+// function analyzeColor(color) {
+//     if (color === "blue") {
+//         return "blue is the color of the sky.";
+//     } else if (color === "red") {
+//         return "Strawberries are red.";
+//     } else {
+//         return `I don't know anything about ${color}.`;
+//     }
+//     return "message";
+// }
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -71,6 +85,9 @@
 // let randomColor = colors[Math.floor(Math.random() * colors.length)];
 // console.log(analyzeColor(randomColor))
 
+    // TEACHER EXAMPLE: Two Steps
+// let message = analyzeColor(randomColor);
+// console.log(message);
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
@@ -92,6 +109,21 @@
 //         break;
 //     default:
 //         alert (`I don't know anything about that color.`);
+// }
+
+// TEACHER EXAMPLE:
+// function analyzeColor(color) {
+//     switch (color) {
+//         case `red`:
+//             return "Roses are red";
+//         case `yellow`:
+//             return "The sun is a yellow star";
+//         case 'blue':
+//             return "The sky is sometimes blue";
+//         default:
+//             return "I don't even know " + color;
+//
+//     }
 // }
 
 /**
@@ -116,7 +148,12 @@
 //         alert(`I don't know anything about that color.`);
 //     }
 // }
-// console.log(analyzeColor)
+// console.log(analyzeColor.toLowerCase())
+
+// TEACHER EXAMPLE:
+
+// const userColor = prompt(`Please enter a color`);
+// console.log(analyzeColor(userColor.toLowerCase()));
 
 /* ########################################################################## */
 
@@ -165,6 +202,24 @@
 // }
 // console.log(calculateTotal(1,100))
 
+// TEACHER EXAMPLE:
+
+// function calculateTotal(luckyNumber, totalAmount) {
+//     if (luckyNumber === 0){
+//         return totalAmount;
+//     } else if (luckyNumber === 1){
+//         return totalAmount * .9;
+//     } else if (luckyNumber === 2) {
+//         return totalAmount * .75;
+//     } else if (luckyNumber === 3) {
+//         return totalAmount * 0.65;
+//     } else if (luckyNumber === 4) {
+//         return totalAmount * .5;
+//     } else if (luckyNumber === 5) {
+//         return 0
+//     }
+// }
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -174,11 +229,11 @@
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// let luckyNumber = Math.floor(Math.random() * 6);
+// const luckyNumber = Math.floor(Math.random() * 6);
 
 // const calculateTotal = (number) => {
 //     let luckyNumber = Math.floor(Math.random() * 6)
-//     let totalAmount = prompt`What is the total amount of the bill?`
+//     let totalAmount = parseFloat(prompt`What is the total amount of the bill?`)
 //     let discountPercent = (number) => {
 //     if (luckyNumber === 0) {
 //         return 0
@@ -203,6 +258,28 @@
 // }
 // console.log(calculateTotal())
 
+// TEACHER EXAMPLE:
+
+// const luckyNumber = Math.floor(Math.random() * 6);
+// const totalBill = parseFloat(prompt(`Enter your total bill here:`))
+// alert(`Your lucky number was ${luckyNumber}`);
+// alert(`Your price before discount was ${totalBill}`);
+// alert(`Your price after discount is ${calculateTotal(luckyNumber,totalBill)}`)
+
+// function toLocaleString(number,country,language,currency) {
+//     return parseFloat(number.toLocaleString(`${language}-${country}`, {style: `currency`, currency:`${currency}`}))
+//     }
+
+        // Function to Format Currency
+// const formatToLocaleString = (number, language, country, currency) => {
+//     return parseFloat(number).toLocaleString(`${language}-${country}`, {
+//         style: "currency",
+//         currency: currency
+//     });
+// };
+//
+// console.log(formatAsCurrency(500,'en','US',`USD`))
+
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -222,5 +299,150 @@
  * HINT: The way we prompt for a value could be improved
  */
 
-const confirmIt = (number) => {
+// const confirmIt = (number) => {
+//     let displayMessage = confirm`Would you like to input a number?`
+//     let inputNumber = prompt(`Input Number`, [Hello])
+//     alert
+//     alert
+//     alert
+//     return inputNumber
+// }
+// console.log(confirmIt())
+
+// TEACHER EXAMPLE:
+
+// const wantsToEnterNumber = confirm("Would you like to enter a number?");
+// if (wantsToEnterNumber){
+//     const userNumber = parseFloat(prompt("Enter a number: "));
+//     if(isNumericAndNotNaN(userNumber)) {
+//         if (userNumber % 2 === 0) {
+//             alert("That number is even!");
+//         } else {
+//             alert("That number is odd!");
+//         }
+//         alert(`That number plus 100 is ` + (userNumber + 100));
+//         if (userNumber < 0) {
+//             alert("That number is negative!");
+//         } else if (userNumber > 0) {
+//             alert("That number is positive!")
+//         } else {
+//             alert("That number is neither positive nor negative.")
+//         }
+//     } else {
+//         alert(`Your input is of incorrect data type.`)
+//     }
+// }
+function getNumber(){
+    const wantsToEnterNumber = confirm("Would you like to enter a number?");
+    if (wantsToEnterNumber) {
+        return parseFloat(prompt("Enter a number: "));
+    }
+    return false
 }
+
+//### IF / ELSE IF / ELSE
+//
+// #### Create a function called `getToDestination` which will help determine how a person can get to their destination!
+//
+// It will accept 4 arguments and the parameter names are:
+//
+// - age - the age of the rider
+// - isInsured - a boolean telling the function if the rider has insurance
+// - hasCar - a boolean describing if the rider has a car
+// - canGetRideshare - boolean describing if the rider can get a ride share (Uber, etc)
+// ---
+// 1. If the rider is over 16, has insurance, and has a car then they can use their own vehicle
+// 2. If the rider is not over 16, has no insurance, OR has no car but they CAN get a rideshare, then they call up a rideshare service
+// 3. If the rider meets none of the above, they should call a friend for a ride!
+//
+// This `getToDestination` should not return any value, but rather console log based on the conditions met.
+//
+// ---
+
+// const getToDestination = () => {
+//     let riderAge = 15
+//     let isInsured = false
+//     let hasCar = false
+//     let canGetRideShare = true
+//     if (riderAge>=17 && isInsured==true && hasCar==true) {
+//         return`You can use your vehicle to get to your destination!`
+//     } else if (riderAge<=16 && isInsured == false && hasCar == false) {
+//         return`Please call a friend or relative to get to your destination.`
+//     } else if (riderAge<=16 || isInsured == false || hasCar == false) {
+//         return`You are able to call a RideShare!`
+//     } else {
+//         alert
+//     }
+// }
+// console.log(getToDestination())
+
+// ---
+// #### getToDestination, part 2
+//
+// - Create a function called canGetRideshare() which will *RETURN* a boolean
+// - It will determine if there are drivers nearby and the person has enough money for the ride
+// - Now, when you call getToDestination(), instead of passing in a canGetRideShare parameter
+// - Call canGetRideshare() in the else if *after* !isLegalDriver &&...
+// - Be sure to log to the user if they can or cannot get a rideshare
+//
+// BONUS -> This exercise will probably get the mind wondering "How can I make this more?.."
+// - Consider this: What if mileage determined:
+// - If the rider has enough funds?
+// - If there is a driver close enough to service the rider?
+//
+// ---
+// ### SWITCH STATEMENTS
+//
+const getToDestination = () => {
+    let riderAge = 15
+    let isInsured = false
+    let hasCar = false
+    let canGetRideShare = true
+    if (riderAge>=17 && isInsured==true && hasCar==true) {
+        return`You can use your vehicle to get to your destination!`
+    } else if (riderAge<=16 && isInsured == false && hasCar == false) {
+        return`Please call a friend or relative to get to your destination.`
+    } else if (riderAge<=16 || isInsured == false || hasCar == false) {
+        return`You are able to call a RideShare!`
+    } else {
+        alert
+    }
+}
+const canGetRideShare = (boolean) => {
+    let driverNearby
+    let notBroke
+    return boolean
+    }
+
+
+
+
+// ---
+// Let's make an application which helps a user input *validated* specs on a vehicle they are trying to sell:
+//  - This will involve multiple switch statements and functions
+//      - Orchestrate the statements in a central function that is responsible for calling and checking for errors
+//      each switch statement should be wrapped in a function which accepts the user's input as a string parameter and return that same string if it is validated
+//      ie: `function getBodyStyle(input){return input}`
+//
+//
+//  - For user input, either use the browser's prompt/confirm/alert methods or mock up user input by hard-coding values
+//
+//
+//  - The user should be able to enter their
+//      - Body style (2D, 4D, etc)
+//      - Vehicle type (sports car, sedan, compact, truck, etc)
+//      - Vehicle color
+//
+//
+//  - Each switch statement should confirm the user's choice in a logging statement
+//
+//
+//  - The point of this is to validate what the user enters.
+//    - If they do not enter an acceptable input, the DEFAULT statement will handle this as an error
+//        ie: default: `"error: " + vehicleType + " not recognized"`;
+//    - If this occurs, call the related function again (see: recursion) until the user enters a correct choice
+//    - HINT: a way you can check for errors is to see if the string contains the word "error"
+//
+//
+//  - After all switch statement functions successfully return the user's input, concatenate them all into a nicely-formatted string and return all data to the user
+})()
