@@ -392,7 +392,7 @@ function getNumber(){
 //
 // ---
 // ### SWITCH STATEMENTS
-//
+
 const getToDestination = () => {
     let riderAge = 15
     let isInsured = false
@@ -402,15 +402,24 @@ const getToDestination = () => {
         return`You can use your vehicle to get to your destination!`
     } else if (riderAge<=16 && isInsured == false && hasCar == false) {
         return`Please call a friend or relative to get to your destination.`
-    } else if (riderAge<=16 || isInsured == false || hasCar == false) {
+    } else if (canGetRideShare == true && riderAge<=16 || isInsured == false || hasCar == false) {
         return`You are able to call a RideShare!`
     } else {
         alert
     }
 }
-const canGetRideShare = (boolean) => {
-    let driverNearby
-    let notBroke
+const canGetRideShare = () => {
+    let driverNearby = true
+    let notBroke = true
+    if (driverNearby === true && notBroke === true) {
+        return `You have the funds for a RideShare, and there is a RideShare nearby!`;
+    } else if (driverNearby === true && notBroke === false) {
+        return `You do not have enough funds for a RideShare.`;
+    } else if (driverNearby === false && notBroke === true) {
+        return `You will be notified when a RideShare is nearby`;
+    } else if (driverNearby === false && notBroke === false) {
+        return (`You do not have the available funds, and there are no RideShare nearby.`)
+    }
     return boolean
     }
 
