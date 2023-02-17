@@ -27,3 +27,46 @@ const returnString = (input) => {
 // You can have the outputs of functions, as data types as well
 let stringsList = [returnString("Jason"),returnString("Javier"),returnString("Kaeden")];
 console.log(`stringsList follows => `, stringsList);
+
+// i == i + 1 === i++
+// for (let i = 0; i < fruits.length; i++) {
+//     let fruit = fruits [i];
+//     console.log(fruit)
+// }
+
+// let favFruit = [];
+// fruits.forEach((element, index,array) => {
+//     if (fruit === "apples" || fruit === "tomatoes") {
+//         favFruit.push(fruit);
+//     }
+// });
+// console.log(favFruits);
+
+let studentSeating = [
+    ["Cynthia","Marc","Yamba","Kelvyn","Nick","Jared"],
+    ["Sarah","Joe","Matthew","Randy","Quintyn","Kaeden", "Damian"],
+]
+
+studentSeating.forEach((row)=>{
+    row.forEach((student)=>{
+        console.log(student)
+    })
+})
+
+// // Function that is fed very specific parameters
+// fruits.forEach(function(element, index,array) {
+//     console.log("The elements follows:", element); //use the singular version "fruit" instead of "fruits"
+//     console.log("The index follows: ", index); // input i for index
+//     console.log("The array follows: ", array);// Not needed everytime
+// });
+
+// const forEach = (callback) => {
+//     callback(element, index, array); // the name doesn't matter, the position does
+// }
+//
+// // You can loop through an array with this function
+// fruits.forEach((element, index,array) => {
+//     console.log("The elements follows:", element); //use the singular version "fruit" instead of "fruits"
+//     console.log("The index follows: ", index); // input i for index
+//     console.log("The array follows: ", array);// Not needed everytime
+// });
