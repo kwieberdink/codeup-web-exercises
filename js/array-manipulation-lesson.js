@@ -79,7 +79,12 @@ const indexOfThursday = daysOfWeek.indexOf(`Thursday`);
 // daysOfWeek.unshift(`Merrelday`); // will put the item at the beginning of the array
 // console.log(daysOfWeek)
 
-let discordName1 = "[GUILD]Jason"
-let discordName2 = "Jason[GUILD]"
-console.log(discordName1.split(`[GUILD]`).join(""));
-console.log(discordName2.split(`[GUILD]`).join(""));
+// let discordName1 = "[GUILD]Jason"
+// let discordName2 = "Jason[GUILD]"
+// console.log(discordName1.split(`[GUILD]`).join(""));
+// console.log(discordName2.split(`[GUILD]`).join(""));
+
+let stringDays = "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday";
+let arrayDays = stringDays.split('|');
+console.log(arrayDays);
+console.log(arrayDays.join(`,`));
