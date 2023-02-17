@@ -27,3 +27,11 @@ function isNumericAndNotNaN(input) {
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+function arrayOfRandomNumbers(lengthOfArray) {
+    const array = [];
+    for (let i = 0; i < lengthOfArray; i++) {
+        const randomNumber = randomNumber (1,100);
+        array.push(randomNumber);
+    }
+}
