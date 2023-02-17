@@ -27,10 +27,14 @@
      */
     console.log(planetsArray.join('<br>'));
 
-    planets.forEach = (planet) => {
-        console.log(`<ul>${planet}</ul>`);
-        console.log(planets.push())
-        console.log(planets.unshift(`<li>`))
-    }
+    let list = document.createElement(`ul`); // create an unordered list
+    // create a list for each wizard
+    // and append it to the list
+    planetsArray.forEach(function(planet) {
+        let li = document.createElement(`li`);
+        li.textContent = planet;
+        list.appendChild(li)
+    });
+    console.log(list)
 
 })();
