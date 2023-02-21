@@ -12,13 +12,16 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-    // const person = {
-    //     first: `Kaeden`,
-    //     last: `Wieberdink`,
-    //     sayHello: `Hello from Kaeden Wieberdink`
-    // }
-    // console.log(person.first)
-    // console.log(person.last)
+    const person = {
+        first: `Kaeden`,
+        last: `Wieberdink`,
+        sayHello: function () {
+            return `Hello ${this.first} ${this.last}!`
+        }
+    }
+    console.log(person.first)
+    console.log(person.last)
+    console.log(person.sayHello())
 
     /**
      * TODO:
@@ -30,7 +33,10 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    // console.log(person.sayHello)
+    // person.sayHello = function () {
+    //     return `Hello ${this.first} ${this.last}!`
+    // }
+
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -46,31 +52,37 @@
      * and console.log the relevant messages for each person
      */
 
-//     let shoppers = [
-//         {name: 'Cameron', amount: 180},
-//         {name: 'Ryan', amount: 250},
-//         {name: 'George', amount: 320}
-//     ];
-//
-//     let billTotal = 200;
-//     let remaining;
-//     let i = 0
-//     // let whoIsIt = prompt(`Which shopper are you looking for?`)
-// if (shoppers[i].amount <= 200) {
-//         let remaining = 200 - shoppers[i].amount
-//         console.log (`You do not qualify for the discount. Your bill does not meet requirements.`);
-//         console.log (`${shoppers[i].name} has spent $${shoppers[i].amount} in total. Still needs
-//         to spend $` + remaining + ` to meet discount requirement. No discount has been applied.`)
-//     } else if (shoppers[2].amount > 200) {
-//         let billDiscount = shoppers[i].amount - (shoppers[i].amount * .12)
-//         console.log (`You qualify for the discount! 12% discount will be applied to your bill.`);
-//         console.log (shoppers[i].name + ` has spent $` + shoppers[i].amount.toFixed(2) + ` in total.
-//         The discount price comes out to $` + billDiscount);
-//     } else {
-//         console.log (` Please input a valid number.`)
-//     }
+    let shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
 
+    let billTotal = 200;
+    let remaining;
+    let i = 0
+    // let whoIsIt = prompt(`Which shopper are you looking for?`)
+if (shoppers[i].amount <= 200) {
+        let remaining = 200 - shoppers[i].amount
+        console.log (`You do not qualify for the discount. Your bill does not meet requirements.`);
+        console.log (`${shoppers[i].name} has spent $${shoppers[i].amount} in total. Still needs
+        to spend $` + remaining + ` to meet discount requirement. No discount has been applied.`)
+    } else if (shoppers[2].amount > 200) {
+        let billDiscount = shoppers[i].amount - (shoppers[i].amount * .12)
+        console.log (`You qualify for the discount! 12% discount will be applied to your bill.`);
+        console.log (shoppers[i].name + ` has spent $` + shoppers[i].amount.toFixed(2) + ` in total.
+        The discount price comes out to $` + billDiscount);
+    } else {
+        console.log (` Please input a valid number.`)
+    }
 
+// Instructor Example
+
+shoppers.forEach(shopper => {
+    const discount = shopper.amount > 200 ? shopper.amount * .12 : 0
+    const total = shopper.amount - discount;
+    console.log(`${shopper.name} -- total: $${shopper.amount}, discount: $${discount}`);
+});
 
 
 
@@ -157,17 +169,17 @@
 
 
 // I like this thing
-for( let i = 0; i < bookss.length; i++) {
-    console.log("We are at index " + i);
-    console.log(bookss[i].title);
-    console.log(bookss[i].author.firstName)
-    console.log(bookss[i].author.lastName)
-}
-
-    bookss.forEach(function() {
-        console.log(bookss.title);
-        console.log(bookss.author)
-})
+// for( let i = 0; i < bookss.length; i++) {
+//     console.log("We are at index " + i);
+//     console.log(bookss[i].title);
+//     console.log(bookss[i].author.firstName)
+//     console.log(bookss[i].author.lastName)
+// }
+//
+//     bookss.forEach(function() {
+//         console.log(bookss.title);
+//         console.log(bookss.author)
+// })
 
     /**
      * Bonus:
@@ -191,30 +203,26 @@ booksList.push(new createBook("Money Changes Everything", "William", "Goetzmann"
 booksList.push(new createBook("Be Have","Robert","Sapolsky"));
 booksList.push(new createBook("Sapiens","Yuval","Harari"))
 
-booksList.forEach(createBook => {
-    console.log(createBook.title);
-    console.log(createBook.firstName);
-    console.log(createBook.lastName);
-})
+// booksList.forEach(createBook => {
+//     console.log(createBook.title);
+//     console.log(createBook.firstName);
+//     console.log(createBook.lastName);
+// })
 
 console.log(booksList);
-booksList.forEach(function(book, index) {
-    console.log("This is the " + (index + 1) + " loop");
-    console.log(book.title);
-    console.log(book.firstName);
-    console.log(book.lastName);
-})
+// booksList.forEach(function(book, index) {
+//     console.log("This is the " + (index + 1) + " loop");
+//     console.log(book.title);
+//     console.log(book.firstName);
+//     console.log(book.lastName);
+// })
 
 for(let i = 0; i < booksList.length; i++) {
     console.log("We are at index " + i);
     console.log(booksList[i].title);
     console.log(booksList[i].firstName);
     console.log(booksList[i].lastName);
-
-
 }
 
-
-// })
 
 // })();

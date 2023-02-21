@@ -1,7 +1,7 @@
 "use strict"
 
 // Formats a number into US Currency
-const dollaDollaBills = (number, language='en', country='USD', currency='USD') => {
+const dollaDolla = (number, language='en', country='US', currency='USD') => {
     return parseFloat(number).toLocaleString(`${language}-${country}`, {
         style: "currency", currency: currency});
 };
@@ -11,12 +11,6 @@ const formatToLocaleString = (number, language, country, currency) => {
     return parseFloat(number).toLocaleString(`${language}-${country}`, {
         style: "currency", currency: currency});
 };
-
-// Simple version of number into US Currency
-const formatterr = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-});
 
 //
 function isNumericAndNotNaN(input) {
