@@ -13,7 +13,7 @@ const formatToLocaleString = (number, language, country, currency) => {
 };
 
 // Simple version of number into US Currency
-const formatter = new Intl.NumberFormat('en-US', {
+const formatterr = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
 });
@@ -31,7 +31,11 @@ function randomNumber(min, max) {
 function arrayOfRandomNumbers(lengthOfArray) {
     const array = [];
     for (let i = 0; i < lengthOfArray; i++) {
-        const randomNumber = randomNumber (1,100);
-        array.push(randomNumber);
+        let newRandomNumber = randomNumber(1,lengthOfArray + 100);
+        while(array.includes(newRandomNumber)) {
+            newRandomNumber = randomNumber(1,lengthOfArray + 100)
+        }
+        array.push(newRandomNumber)
     }
+    return array;
 }
