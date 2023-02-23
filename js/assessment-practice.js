@@ -56,6 +56,10 @@ console.log(typeof(null));
     // /= ;
     // %= ;
 
+//      FUNCTIONS:
+
+
+
 console.log(dollaDolla(42))
 
 console.log(formatterr(90))
