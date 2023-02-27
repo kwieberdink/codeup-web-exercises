@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -14,24 +16,37 @@ img {
 }
 
 h1, h2 {
-    color: #000aaa;
-    font-family: sans-serif;
+    color: #423E41;
+    font-family: Roboto, sans-serif;
+}
+
+h1 {
     text-decoration: underline;
 }
 
 body {
     margin: 0px;
     padding: 20px;
+    color: #423E41;
+    font-family: Roboto, sans-serif; /* good practice to always have sans-serif as a last resort */
+    background-color: #79A99B;
+    /*background-image: url("../images/open-window-1.jpg");*/
+    background-size: cover;
 }
 
 .header1 {
     font-size: 50px;
     margin-bottom: 0px;
     transition: all ease .3s; /* you have to add transition here to ease out as well instead of the one below */
+    font-weight:300;
+}
+
+span.heavy {
+    font-weight:800;
 }
 
 .header1:hover {
-    color:red;
+    color:#79A99B;
 }
 
 .text-center {
@@ -39,11 +54,11 @@ body {
 }
 
 header p {
-    color: #838383;
+    color: #79A99B;
 }
 
 header { /* adds background color to header */
-    background-color: #f1f1f1;
+    background-color: #E5E9DF;
     padding: 20px; /* did not indicate a side, so it will be applied all around */
     border-bottom: 1px solid #000000 /* adds a border to the bottom of the header*/
 }
@@ -95,4 +110,12 @@ main {
 
 .feature-container li:nth-child(even) {
     color:red;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: upper-roman;
 }
