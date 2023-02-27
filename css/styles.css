@@ -1,0 +1,19 @@
+/*p {
+    color: #a60505;
+    text-transform:capitalize;
+}*/
+
+/* classes are classified by adding a period prior to class name */
+.red-paragraph {
+    color: #a60505;
+    text-transform:uppercase;
+}
+/* for classifying an ID then you will need to use # */
+/* can only apply one ID, but can add many class names */
+#paragraph1 {
+    font-style: italic;
+}
+
+.red-paragraph.smaller-font {
+    font-size:10px
+}
