@@ -1,0 +1,28 @@
+*, *::before, *::after { /* this keeps the boxes from changing size */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img, video, canvas, picture, svg {
+    display: block;
+    max-width: 100%;
+    width:100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height:1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+#root #_next {
+    isolation: isolate;
+}
