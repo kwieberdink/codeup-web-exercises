@@ -1,0 +1,30 @@
+* { /* this keeps the boxes from changing size */
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    width:100%;
+}
+
+.page-wrapper {
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.page-wrapper.all-centered { /* this is combo classing */
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 400px;
+    height:300px;
+    background-color:grey;
+    /*margin:40px; !* margin pushes stuff away*!*/
+    padding:40px; /* pushes stuff inward*/
+    border: 10px solid #000; /* width of line/ whether solid;dashed;etc/ colo*/
+}

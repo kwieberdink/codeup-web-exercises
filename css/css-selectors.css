@@ -41,6 +41,16 @@ body {
     font-weight:300;
 }
 
+#item  {
+    width:100px;
+    border:1px #005;
+    padding: 20px;
+    margin: 0px;
+    background-color: #000;
+    display:inline-block;
+    height:auto
+}
+
 span.heavy {
     font-weight:800;
 }
@@ -60,7 +70,10 @@ header p {
 header { /* adds background color to header */
     background-color: #E5E9DF;
     padding: 20px; /* did not indicate a side, so it will be applied all around */
-    border-bottom: 1px solid #000000 /* adds a border to the bottom of the header*/
+    border: 2px solid #000000; /* adds a border to the bottom of the header*/
+    box-shadow: 2px 2px;
+    text-shadow: 1px 1px;
+    border-radius: 20px;
 }
 
 main {
@@ -109,7 +122,7 @@ main {
 /*}*/
 
 .feature-container li:nth-child(even) {
-    color:red;
+    color: #134643;
 }
 
 ul {
@@ -118,4 +131,13 @@ ul {
 
 ol {
     list-style-type: upper-roman;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size:0.9em;
+    font-family: Roboto, sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
