@@ -89,7 +89,15 @@ h1 {
 p {
     font-size: 18px
 }
+.p-bottom-text {
+    font-size: 15px
+}
 
 .feature {
-    padding-top: 10px
+    padding-top: 40px
+}
+
+.feature-image {
+    max-width: 400px;
+    padding: 30px
 }
