@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+header.container {
+    height: 80px;
+    /*border-bottom: 1px solid #000;*/
+}
+
+img {
+    height: 30px;
+    width:30px;
+}
+
+button {
+    background-color: #979797;
+    color: white;
+    padding: 5px;
+    border:unset;
+    width: 100px;
+    border-radius:5px
+}
+
+header.container {
+    height: 80px;
+    /*border-bottom: 1px solid #000000;*/
+}
+
+.container.hero-scene {
+    height: 80vh;
+    background-color: #ececec;
+}
+
+.hero-text {
+    max-width: 500px;
+    padding: 50px;
+    gap: 30px;
+}
+
+.container.features {
+    padding: 40px 0;
+}
+
+.feature-card {
+    border-radius:10px;
+    padding: 20px;
+    transition: all ease .3s;
+    max-width: 450px
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.grey-box {
+    max-width: 500px;
+    height: 50vh;
+    background-color: #979797;
+    border-radius:5px;
+}
+
+body {
+    font-family: Roboto,sans-serif;
+    color: #979797;
+}
+
+h2 {
+    font-size: 50px;
+    padding: 10px;
+    margin-top: 40px;
+    font-weight:400
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 500
+}
+
+.feature-text {
+    max-width: 540px
+}
+
+.feature-title {
+
+}
+
+p {
+    font-size: 18px
+}
