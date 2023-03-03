@@ -71,7 +71,12 @@ function totalPets(persons) {
  * All test arrays will have at least one element and are valid.
  */
 
-
+function minMax(numbersArray) {
+    const minAndMax = [];
+    minAndMax[0] = Math.min(...numbersArray);
+    minAndMax[1] = Math.max(...numbersArray);
+    return minAndMax
+}
 
 /**
  * Drink Sorting
