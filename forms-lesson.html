@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Lesson</title>
+    <link rel="stylesheet" href="/css/resets.css">
+    <link rel="stylesheet" href="/css/layouts.css">
+</head>
+<body>
+<form method="get" action="https://request-inspector.glitch.me">
+    <label for="username">Username:</label> <!-- for attribute always has an id attribute-->
+    <input type="text" id="username" name="username"> <!--type attribute -->
+    <br>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <br> <!-- any form involving passwords need a POST request
+    instead of a GET request-->
+    <br>
+    <h4>Marvel or DC?</h4>
+    <label for="marvel">Marvel:</label><input type="radio" name="marveldc" value="Marvel" id="marvel"><br>
+    <label for="dc">DC:</label><input type="radio" name="marveldc" value="DC" id="dc"><br>
+    <input type="submit">
+</form>
+</body>
+</html>
