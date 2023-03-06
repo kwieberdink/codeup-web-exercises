@@ -5,9 +5,9 @@
     <title>Forms Exercise</title>
     <link rel="stylesheet" href="/css/resets.css"/>
     <link rel="stylesheet" href="/css/layout.css"/>
-    <link rel="stylesheet" href="/css"/>
+    <link rel="stylesheet" href="/css/forms.css"/>
 </head>
-<body>
+<body class="code-up-mode">
 <div class="page-wrapper">
     <div class="container gow justify-center">
         <div class="row">
@@ -16,12 +16,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="column">
+            <div class="column align-center justify-center">
                 <form method="POST" action="https://request-inspector.glitch.me/">
                     <fieldset>
                         <legend><h4>Login: </h4></legend>
                         <div class="row">
-                            <div class="column">
+                            <div class="column justify-center align-center">
                                 <div class="input-wrapper">
                                     <label for="email">Email: </label>
                                     <input id="email" name="email" type="text">
@@ -40,19 +40,19 @@
 
                     <fieldset>
                         <legend><h4>How Did You Hear About Us? :</h4></legend>
-                            <div class="input=wrapper">
+                            <div class="input-wrapper">
                                 <div for="billboard">Billboard:</div>
                                 A <input type="radio" name="aboutus1" value="billboard" id="billboard"><br>
                             </div>
-                            <div class="input=wrapper">
+                            <div class="input-wrapper">
                                 <div for="radio-advertisement">Radio Advertisement:</div>
                                 A <input type="radio" name="aboutus2" value="radio-advertisement" id="radio-advertisement"><br>
                             </div>
-                            <div class="input=wrapper">
+                            <div class="input-wrapper">
                                 <div for="internet-advertisement">Internet Advertisement:</div>
                                 A <input type="radio" name="aboutus3" value="internet-advertisement" id="internet-advertisement"><br>
                             </div>
-                            <div class="input=wrapper">
+                            <div class="input-wrapper">
                                 <div for="other">Other:</div>
                                 A <input type="radio" name="aboutus4" value="other" id="other"><br>
                             </div>
@@ -67,18 +67,16 @@
                             <option value="Microsoft Edge">Microsoft Edge</option>
                         </select>
                     </fieldset>
-                    <div class="input-wrapper">
-                        <label for="reset">Reset Input:</label>
-                        <input type="reset" id="reset">
-                    </div>
-                    <div class="input-wrapper">
-                        <input type="submit" value="Submit Form">
-                    </div>
+                        <div class="row justify-center align-center">
+                            <label for="reset">Reset Form:</label>
+                            <input type="reset" id="reset">
+                        </div>
+                        <div class="row justify-center align-center">
+                            <input type="submit" value="Submit Form">
+                        </div>
                 </form>
             </div>
         </div>
-
-
     </div>
 </div>
 </body>
