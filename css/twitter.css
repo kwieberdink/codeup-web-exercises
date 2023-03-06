@@ -18,6 +18,28 @@
     cursor:pointer; /* cursor changes to a pointer when hovering over logo*/
 }
 
+nav.sidebar-nav {
+    display:flex;
+    flex-direction:column;
+    align-items: start;
+    gap:5px
+}
+
+.left-sidebar.blue-twitter-button {
+    align-self: stretch;
+    max-width: 226px;
+}
+
+.sidebar-bottom {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 20px;
+    align-self:stretch;
+    padding-right: 5px;
+}
+
 .logo-wrapper:hover{
     background-color: var(--twitter-light-blue);
 }
@@ -26,9 +48,9 @@
     color: white;
     background-color: var(--twitter-blue);
     border-radius: 999px;
-    border: unset;
-    height: 40px;
-    width: 200px;
+    border: none;
+    outline:none;
+    min-height: 52px;
     font-weight: 600; /* changes the thickness of the font */
     padding: 0 32px; /*generate space around an element's content
     ex. padding: 25px(top) 50px(right) 75px(bottom) 100px(left)
@@ -37,11 +59,28 @@
     display:flex;
     align-items: center; /* moves the tweet up and down */
     justify-content: center; /* moves the tweet left and right */
+    text-align:center;
+    font-size:17px;
+}
+
+.row {
+    max-width: 1270px;
 }
 
 body {
     font-family: Roboto, sans-serif;
     font-size: 20px;
+}
+
+.left-sidebar {
+    flex: 0 1 250px
+}
+
+.left-sidebar {
+    border-right: 1px solid var(--light-grey);
+    justify-content: start;
+    align-items:start;
+    gap:30px /* spaced out the button and the bottom text */
 }
 
 .menu-icon-wrapper {
