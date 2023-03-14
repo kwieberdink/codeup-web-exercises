@@ -29,25 +29,55 @@
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        // var mainHeader = ;
+        let mainHeader = document.getElementById('main-header');
+
+        // The function below is specific to the first item of what it is looking for
+        // Most recent Syntax
+        // let mainHeader = document.querySelector('#main-header');
+
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        mainHeader.innerHTML = "JavaScript is Cool"
 
         // TODO: Uncomment the next line and get the sub header element by id
-        // var subHeader = ;
+        let subHeader = document.getElementById('sub-header');
+
+        // let subHeader = document.querySelector('#sub-header');
 
         // TODO: Set the text color of subHeader to blue
+        subHeader.style.color = 'blue';
 
         // TODO: Uncomment the next line and get all list items
-        // var listItems = ;
+        let listItems = document.getElementsByTagName(`li`) ;
+
+        // querySelectorAll selects all of the items rather than querySelector which only selects one
+        // let listItems = document.querySelectorAll('li');
+
 
         // TODO: Set text color on every other list item to grey
+        for (let i = 0; i <listItems.length; i++) {
+            if (i % 2 === 1) {
+                listItems[i].style.color = 'grey';
+            }
+        };
+
         // TODO: Set text color of li with dbid = 1 to blue
+        let dbidLi = document.querySelector('[data-dbid="1"]');
+        dbidLi.style.color = 'blue';
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        // var subParagraphs = ;
+        let subParagraph = document.querySelectorAll(".sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        subParagraph.innerText = "Mission Accomplished!";
+
+        // If searching for the first out of multiple, you would use a function like the one below.
+        // subParagraphs.forEach(function(element, index){
+        //     if(index < 2) {
+        //         element.innerText = 'Mission Accomplished!';
+        //     }
+        // });
+
     })();
 </script>
 </body>
