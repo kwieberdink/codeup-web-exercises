@@ -1,0 +1,39 @@
+
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+h1 {
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 10px;
+    color:black;
+    background-color: green;
+    padding: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all ease .5s;
+    max-width: 200px;
+    /*margin-bottom: 20px;*/
+}
+
+h1:hover {
+    background-color: darkgreen;
+}
+
+.fruit {
+    border: 2px solid #423E41;
+    border-radius:10px;
+    max-width: 100px;
+    text-align: center;
+    background-color: #6D6D6D;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.fruit:hover {
+    background-color: #423E41;
+    border: 2px solid #6D6D6D
+}
