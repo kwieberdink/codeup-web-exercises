@@ -36,3 +36,26 @@ $("li").css({
 $("h1").click(function(){
     alert($("h1").text());
 });
+
+$("h1").click(function(){
+    $("h1").css({
+        'background-color': 'red'
+    });
+});
+
+$("p").dblclick(function(){
+    $("p").css({
+        'font-size': '18px'
+    });
+});
+
+
+// Syntax for hover: $( selector ) .hover ( handlerIn, handlerOut )
+$("li").hover(
+    function(){
+        $(this).css('color', 'red');
+    },
+    function(){
+        $(this).css('color', 'black');
+    }
+);
