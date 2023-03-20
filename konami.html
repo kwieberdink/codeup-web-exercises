@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/konami.css">
+
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="column">
+<!--                .KEYDOWN() EXAMPLE   -->
+<!--                <p>Please type something into this form:</p>-->
+<!--                <form>-->
+<!--                    <input type="text" id="text-field" name="text-field" placeholder="Type Here"/>-->
+<!--                </form>-->
+<!--                .KEYUP() EXAMPLE-->
+                <p>Please type something into this form:</p>
+                <form>
+                    <input type="text" id="textfield" name="textfield" placeholder="Type Here"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/konami.js"></script>
+<script>
+    "use strict";
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+</script>
+</body>
+</html>
