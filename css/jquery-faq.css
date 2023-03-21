@@ -1,18 +1,101 @@
+:root{
+    --light-blue: lightblue;
+    --opacity-black: rgb(35,43,43,70%)
+}
+
 body {
-    color: white;
-    background-color: black ;
+    color: #1DA1F2;
+    background-color: #134643 ;
+}
+
+header {
+    border: 5px black
 }
 
 dt {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 25px;
     cursor: pointer;
+    padding: 10px
 }
 
 dt:hover{
-    color: lightblue;
+    color: var(--light-blue);
 }
 
 .invisible{
 
+}
+
+h3 {
+    cursor: pointer;
+}
+
+h3:hover {
+    color:lightblue;
+}
+
+li{
+    cursor: pointer;
+}
+
+h2 {
+    padding-top: 30px;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 20px;
+    cursor:pointer;
+}
+
+h2:hover{
+    color: var(--light-blue)
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+dt, h3 {
+    text-decoration: underline;
+}
+
+.imageSwap {
+    justify-content: center;
+    align-items: center ;
+}
+
+fieldset {
+    padding-top: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.black-background{
+    background-color: var(--opacity-black)
+}
+
+.img-wrapper{
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-image: url('/images/picture-frame-1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.picture {
+    width: 100%;
+    object-fit: cover;
+    position:absolute;
+    z-index: -1;
+    top: 15px;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+}
+
+.gap-10 {
+    gap: 10px
 }
