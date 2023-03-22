@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --header-black: rgb(47, 47, 49, 75%);
+    --body-black: rgb(69, 69, 71, 60%)
+}
+
+/*Body & Container*/
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+
+}
+
+.row {
+
+ }
+
+/*Header*/
+header {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border: 2px solid black;
+    width: 90%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Map */
+#map {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 10px #888888;
+    padding-bottom: 50px;
+}
+.mapboxgl-popup-content {
+    padding-top: 20px;
+    background-color: var(--header-black);
+    color: white;
+    border: 1px solid black
+}
+.mapboxgl-popup-close-button {
+    color:white;
+    border: unset
+}
+.marker {
+    background-image: url("/images/hamburger-1.png");
+    background-size: cover;
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+row {
+
+}
+.popup {
+    text-decoration: underline;
+}
+
+/* forms & fieldset*/
+
+fieldset {
+    border: 2px solid black;
+    padding-bottom: 10px;
+    background-color: var(--body-black);
+    color: white;
+    font-weight: 700;
+}
+
+.fieldset1 {
+    border-top-right-radius: 20px;
+}
+
+.fieldset2 {
+    border-bottom-right-radius: 20px;
+
+}
+
+input {
+    border: 1px solid black
+}
+
+.formBtn {
+    border: unset;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px
+}
