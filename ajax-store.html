@@ -11,25 +11,33 @@
     <div class="container">
         <div class="row">
             <div class="column">
-                <h1>My Tool Store</h1>
-
-                <table id="products">
-                    <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Categories</th>
-                    </tr>
-                    </thead>
-                    <tbody id="insertProducts"></tbody>
-                </table>
+                <div class="row justify-center align-center text-center">
+                    <h1>My Tool Store</h1>
+                </div>
+                <div class="row justify-center align-center text-center">
+                    <table id="products">
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Categories</th>
+                        </tr>
+                        </thead>
+                        <tbody id="insertProducts"></tbody>
+                    </table>
+                </div>
+                <div class="row btnContainer">
+                    <button id="refreshBtn">Refresh</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/utils.js"></script>
+
 <script src="js/ajax-store.js"></script>
 </body>
 </html>

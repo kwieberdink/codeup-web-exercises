@@ -121,3 +121,7 @@
 .column.justify-space-between {
     justifty-content:space-between
 }
+
+.gap-10{
+    gap: 10px;
+}
