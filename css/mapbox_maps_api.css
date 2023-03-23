@@ -93,5 +93,25 @@ input {
     border: unset;
     height: 40px;
     width: 100px;
-    border-radius: 20px
+    border-radius: 20px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+}
+
+.animated {
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.bounce-animation {
+    animation-name: bounce;
 }

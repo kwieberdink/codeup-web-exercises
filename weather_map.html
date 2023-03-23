@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map Project</title>
+    <!--  Important to have the keys file   -->
+    <script src="js/keys.js"></script>
+    <!--  Mapbox Script Start  -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet'/>
+    <!--  Mapbox Script End  -->
+    <!--  CSS Start  -->
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/weather_map.css">
+    <!--  CSS End  -->
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="column">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Function Utils-->
+<script src="js/utils.js"></script>
+<!--Weather Map Utils-->
+<script src="js/weather-map-utils.js"></script>
+<!--MapBox Utils-->
+<script src="js/mapbox-geocoder-utils.js"></script>
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<!--Map Format-->
+<script>
+    // mapboxgl.accessToken = MAPBOX_API_TOKEN
+    // const map = new mapboxgl.Map({
+    //     container: 'map', // container ID
+    //     style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
+    //     center: [-97.77925, 30.24514], // starting position [lng, lat]
+    //     zoom: 10, // starting zoom
+    // });
+</script>
+<!--Weather Map JS-->
+<script src="js/weather_map.js"></script>
+</body>
+</html>
