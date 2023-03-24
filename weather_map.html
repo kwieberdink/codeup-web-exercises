@@ -17,12 +17,66 @@
 </head>
 <body>
 <div class="page-wrapper">
-    <div class="container">
-        <div class="row">
+    <div id='map'></div>
+    <div class="container relative" id="searchContainer">
+        <div class="row markerBorder">
             <div class="column">
+                <label for="setMarker">Enter a City:</label>
+                <input type="text" placeholder="Enter Any City..." name="setMarker" id="setMarker" value="San Antonio, TX">
+                <button class="formBtn" id="setMarkerButton">Search for Address</button>
+            </div>
+            <div></div>
+        </div>
+    </div>
+    <div class="slide-screen">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <div class="current-forecast">
+                        <div class="row">
+                        </div>
+                        <h1>Current Weather: San Antonio, TX</h1>
+                        <div class="column">
+                            <img src="/images/weather-icon-1.png">
+                        </div>
+                        <div class="column justify-right text-right">
+                            <h2>San Antonio</h2>
+                            <p>Current Temperature:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="daily-forecast">
 
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="daily-forecast">
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="daily-forecast">
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="daily-forecast">
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="daily-forecast">
+
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="test-toggle">
+        <button>Test Toggle</button>
     </div>
 </div>
 
@@ -34,16 +88,6 @@
 <script src="js/mapbox-geocoder-utils.js"></script>
 <!--jQuery-->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-<!--Map Format-->
-<script>
-    // mapboxgl.accessToken = MAPBOX_API_TOKEN
-    // const map = new mapboxgl.Map({
-    //     container: 'map', // container ID
-    //     style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
-    //     center: [-97.77925, 30.24514], // starting position [lng, lat]
-    //     zoom: 10, // starting zoom
-    // });
-</script>
 <!--Weather Map JS-->
 <script src="js/weather_map.js"></script>
 </body>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map Layout</title>
+    <script src="js/keys.js"></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet'/>
+
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/layout.css">
+
+    <link rel="stylesheet" href="css/weather-map-layout.css">
+</head>
+<body>
+<div class="page-wrapper grow">
+    <header class="justify-center align-center">
+        <div class="row grow justify-center align-center">
+            <div class="column header-col">
+                <div class="header-section">
+                    <img src="images/weather-icon-1.png">
+                </div>
+            </div>
+            <div class="column">
+                <div class="header-section">
+                    <img src="images/weather-icon-1.png">
+                </div>
+            </div>
+            <div class="column">
+                <div class="header-section">
+<!--                    <img class="img" src="images/location-marker.png">-->
+                    <h3>San Antonio, TX</h3>
+                </div>
+            </div>
+            <div class="column">
+                <div class="header-section">
+                    <input type="text" id="setMarker" placeholder="Search City.." name="setMarker" value="San Antonio, TX">
+<!--                    <button class"formBtn-->
+                </div>
+            </div>
+            <div class="column">
+                <button class="formBtn" id="setMarkerButton">Search City</button>
+            </div>
+            <div class="column">
+                <div class="header-section justify-right">
+                    <h3>San Antonio, TX</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container grow">
+        <div class="row">
+            <div class="column">
+                <div class="row main-header-sub">
+                    <div class="column sub-header text-center">
+                        <p>Today</p>
+                        <p>Tomorrow</p>
+                        <p>Next 5 Days</p>
+                    </div>
+                    <div class="column sub-header justify-center align-center text-center">
+                        <p>Forecast</p>
+                    </div>
+                    <div class="column sub-header justify-center align-center text-center">
+                        <p>Chance of Rain</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Current Weather in San Antonio, TX</h1>
+        </div>
+        <div class="row current-weather">
+            <div class="column">
+                <div class="row">
+                    <h3>Day</h3>
+                    <h3>Time</h3>
+                </div>
+                <div class="column">
+                    <h3>Temp</h3>
+                    <p>Real Feel</p>
+                    <p>Wind</p>
+                    <p>pressure</p>
+                    <p>humidity</p>
+                </div>
+                <div class="column">
+                    <p>Image</p>
+                    <p>sunrise</p>
+                    <p>sunset</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <h2>5 Day Forecast</h2>
+            </div>
+        </div>
+        <div class="row weather-container">
+            <div class="column weather-box">
+                <div>
+                    <h3>City</h3>
+                </div>
+            </div>
+            <div class="column weather-box">
+                <div>
+                    <h3>City</h3>
+                </div>
+            </div>
+            <div class="column weather-box">
+                <div>
+                    <h3>City</h3>
+                </div>
+            </div>
+            <div class="column weather-box">
+                <div>
+                    <h3>City</h3>
+                </div>
+            </div>
+            <div class="column weather-box">
+                <div>
+                    <h3>City</h3>
+                    <img src="images/weather-icon-1.png">
+                    <p>description</p>
+                    <p>current</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <p>GLOBAL MAP</p>
+            </div>
+            <div class="column">
+                <p>GLOBAL MAP</p>
+            </div>
+            <div class="column">
+                <p>GLOBAL MAP</p>
+            </div>
+        </div>
+        <div class="row map-container justify-center align-center">
+            <div class="column justify-center align-center">
+                <div id='map' style='width: 1000px; height: 400px;'></div>
+            </div>
+        </div>
+        <footer>
+            <p></p>
+        </footer>
+    </div>
+</div>
+
+<!--Function Utils-->
+<script src="js/utils.js"></script>
+<!--Weather Map Utils-->
+<script src="js/weather-map-utils.js"></script>
+<!--MapBox Utils-->
+<script src="js/mapbox-geocoder-utils.js"></script>
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<!--<script src="js/weather-map-layout.js"></script>-->
+<script src="js/weather-map-layout.js"></script>
+
+</body>
+</html>
