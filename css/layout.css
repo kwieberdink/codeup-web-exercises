@@ -133,3 +133,6 @@
 .text-right {
     text-align: right;
 }
+.wrap {
+    flex-wrap: wrap;
+}
