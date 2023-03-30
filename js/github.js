@@ -64,3 +64,39 @@ export const getLastCommit = async (username) => {
     })
     return lastCommits[0];
 }
+
+// STAR WARS API
+
+export const getStarWarsCharacterEye = async (char) => {
+    try {
+        const url = `https://swapi.dev/api/people/${char}`;
+        let response = await fetch(url);
+        let data = await response.json();
+        return data.eye_color
+    } catch(error) {
+        console.log(error);
+    }
+}
+
+export const getStarWarsMovie = async (film) => {
+    try{
+        const url = `https://swapi.dev/api/films/${film}`;
+        let response = await fetch(url);
+        let data = await response.json();
+        return data
+    } catch(error) {
+        console.log(error);
+    }
+}
+
+export const getStarWarsPlanet = async (planet) => {
+    try {
+        const url = `https://swapi.dev/api/planets/${planet}`;
+        let response = await fetch(url);
+        let data = await response.json();
+        return data
+    } catch(error) {
+        console.log(error);
+    }
+}
+
