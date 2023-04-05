@@ -1,0 +1,50 @@
+
+body {
+    color: white;
+}
+
+.firstCol {
+    background-color: grey;
+    height: 700px;
+    width: fit-content;
+}
+
+header {
+    background-color: black;
+    height: 100px;
+}
+
+.secCol {
+    background-color: #4D5E33;
+    height: 90%;
+    width: 300px;
+}
+
+.thrdCol {
+    background-color: #423E41;
+    height: 90%;
+    width: 300px;
+    /*border-radius: 40px;*/
+}
+
+.movieContainer {
+    width: 400px;
+}
+
+.movieWallpaper {
+    background-color: #79A99B;
+    width: 400px;
+    height: 90%
+}
+
+.movieInput {
+    width: 100%;
+    height: 300px;
+    background-color: #134643;
+}
+
+.listMovie {
+    height: 400px;
+    width: 100%;
+    background-color: #423E41;
+}

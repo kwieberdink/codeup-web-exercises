@@ -1,4 +1,5 @@
-function windCardinalDirection(degrees){
+
+export function windCardinalDirection(degrees){
     let cardinalDirection = '';
     if ((degrees > 348.75 && degrees <= 360) || (degrees >=0 && degrees <= 11.25)){
         cardinalDirection = "N";
@@ -36,16 +37,16 @@ function windCardinalDirection(degrees){
     return cardinalDirection;
 }
 
-function appendLeadingZeroes(n){
+export function appendLeadingZeroes(n){
     if(n <= 9){
         return "0" + n;
     }
     return n;
 }
 
-const months = ["JAN", "FEB", "MAR","APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+export const months = ["JAN", "FEB", "MAR","APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 
-function formatTime(timeStamp){
+export function formatTime(timeStamp){
     let dateTime = new Date(timeStamp * 1000);
     let year = dateTime.getFullYear();
     let month = months[dateTime.getMonth()];
@@ -56,7 +57,7 @@ function formatTime(timeStamp){
     return month + " " + day + " " + year + " " + hour + ":" + minutes + ":" + seconds;
 }
 
-function dateFromTimeStamp(timeStamp){
+export function dateFromTimeStamp(timeStamp){
     let dateTime = new Date(timeStamp * 1000);
     let year = dateTime.getFullYear();
     let month = appendLeadingZeroes(dateTime.getMonth() + 1);
@@ -64,21 +65,21 @@ function dateFromTimeStamp(timeStamp){
     return `${year}-${month}-${day}`;
 }
 
-const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+export const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-const daysOfWeekAbbreviated = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+export const daysOfWeekAbbreviated = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-function namedDayFromDay(timeStamp){
+export function namedDayFromDay(timeStamp){
     let dateTime = new Date(timeStamp * 1000);
     return daysOfWeek[dateTime.getDay()];
 }
 
-function dayOfWeekFromDayAbbreviated(timeStamp){
+export function dayOfWeekFromDayAbbreviated(timeStamp){
     let dateTime = new Date(timeStamp * 1000);
     return daysOfWeekAbbreviated[dateTime.getDay()];
 }
 
-function mostFrequent(array){
+export function mostFrequent(array){
     const arrayElementsCount = array.reduce(function(total, element){
         if (!total[element]) {
             total[element] = 1;
@@ -93,7 +94,7 @@ function mostFrequent(array){
     return arraySorted[0][0];
 }
 
-function average(array){
+export function average(array){
     let total = 0;
     array.forEach((element, index, array)=>total+=element);
     return total/array.length;

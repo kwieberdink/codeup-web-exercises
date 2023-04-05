@@ -24,8 +24,8 @@ dropdowns.forEach(function(dropdown){
 });
 
 pageWrapper.addEventListener('click', function(event) {
-    // if the even taget is not a dropdown, close all dropdowns
-    if (event.target.closest('[data-dropdown="parant"]')) {
+    // if the even target is not a dropdown, close all dropdowns
+    if (event.target.closest('[data-dropdown="parent"]')) {
         dropdowns.forEach(function(dropdown) {
             dropdown.classList.remove('open');
         });

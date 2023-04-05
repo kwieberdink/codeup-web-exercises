@@ -12,13 +12,12 @@ export const getGitHubUsers = async () => {
         console.log(error);
     }
 
-
-    return fetch('https://api.github.com/users')
-        .then(response => response.json())
-        .then(data => data)
-        .catch(error => {
-            console.log(error);
-        });
+    // return fetch('https://api.github.com/users')
+    //     .then(response => response.json())
+    //     .then(data => data)
+    //     .catch(error => {
+    //         console.log(error);
+    //     });
 }
 
 export const renderGithubUser = (user, parent) => {
